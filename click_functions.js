@@ -42,8 +42,26 @@ function acceptUser(accept = 1){
 
 
 
+//full route to start meet window automatically
+function gameStart(){
+
+let link ="https://meet.google.com/"; // go to this link
+
+document.getElementsByClassName("VfPpkd-RLmnJb")[0].click();
+let meetLink ;  // this variable is useful
+if(document.getElementsByClassName("ZR1ISd")[0].innerText)
+    meetLink = document.getElementsByClassName("ZR1ISd")[0].innerText;
+else 
+    console.log(` login in google 1st `);
+//after a wait
+document.getElementsByClassName("l4V7wb Fxmcue")[0].children[0].click(); // join now
+//wait
+document.getElementsByClassName("VY7JQd")[0].children[0].click(); // close share
+
+return meetLink;
 
 
+}
 
 
 
@@ -52,7 +70,8 @@ module.export = {
     toggleVoice,
     acceptUser,
     meetTabListener,
-    audioVideoTapListener
+    audioVideoTapListener,
+    gameStart
     
 };
 
