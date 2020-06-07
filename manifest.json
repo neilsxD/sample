@@ -17,7 +17,7 @@
     }
   ],
 
-  "permissions": ["bookmarks", "storage"],
+  "permissions": ["bookmarks", "storage", "tabs"],
 
   "browser_action": {
     "default_title": "Mafia",
