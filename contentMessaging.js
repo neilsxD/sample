@@ -1,1 +1,1 @@
-window.onload(alert('moved as of content script'));
+window.onload(alert("moved as of content script"));

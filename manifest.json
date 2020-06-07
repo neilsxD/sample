@@ -1,33 +1,32 @@
 {
-    "name": "mah 1st extension",
-    "version" : "1.0.0",
-    "description":"learning to make extension via uDemy",
-    "manifest_version":2,
-    "background":{
-        "scripts" : ["background.js" , "backgroundMessaging.js"],
-        "persistent": false
-    },
-    "content_scripts": [
-        {
-           "matches":["https://*.youtube.com/*"],
-           "css":[],
-           "exclude_matches":["https://*.youtube.com/watch"],
-            "js":["content.js","contentMessaging.js"],
-            "run_at" : "document_end"
-        }
-    ],
-
-    "permissions":["bookmarks","storage"],
-
-    "browser_action" :{
-        "default_title": "made by neils_xD",
-        "default_popup" : "popup.html"
-    },
-
-    "icons" :
+  "name": "Mafia",
+  "version": "1.0.0",
+  "description": "The game persists.",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js", "backgroundMessaging.js"],
+    "persistent": false
+  },
+  "content_scripts": [
     {
-        "16": "player_hang.png",
-        "48":"player_hang.png",
-        "128":"player_hang.png"
+      "matches": ["https://*.youtube.com/*"],
+      "css": [],
+      "exclude_matches": ["https://*.youtube.com/watch"],
+      "js": ["content.js", "contentMessaging.js"],
+      "run_at": "document_end"
     }
+  ],
+
+  "permissions": ["bookmarks", "storage"],
+
+  "browser_action": {
+    "default_title": "Mafia",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "16": "./images/mafia.jpg",
+    "48": "./images/mafia.jpg",
+    "128": "./images/mafia.jpg"
+  }
 }
