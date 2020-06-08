@@ -10,6 +10,26 @@
   color: red;
 }
 
+.bg-img {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  background-image: url("./images/mafia.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: absolute;
+  color: red;
+  filter: blur(2px);
+}
+
+.register {
+  overflow: hidden;
+  margin: 0;
+  padding: auto;
+}
+
 .head {
   font-size: 20;
   width: 200px;
@@ -26,4 +46,21 @@
 .click {
   color: white;
   padding: 2px 80px;
+}
+
+.buttons {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+.btn {
+  margin: 35vh 4vh;
+  width: 20vw;
+  height: 20vh;
+  border-radius: 10px;
+  background-color: black;
+  color: red;
+  font-size: 20px;
 }
