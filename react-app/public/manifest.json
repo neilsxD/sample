@@ -1,0 +1,57 @@
+{
+  "name": "Mafia React",
+  "version": "1.0.0",
+  "description": "The game persists.",
+  "manifest_version": 2,
+    "background": {
+    "scripts": ["bgscripts/background.js",
+      "bgscripts/backgroundMessaging.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>",
+        "*://*/*"
+      ],
+      "match_about_blank": true,
+      "css": ["/css/root.css"],
+      "js": ["/static/js/content.js"],
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://*.youtube.com/*"
+      ],
+      "css": [],
+      "exclude_matches": [
+        "https://*.youtube.com/watch"
+      ],
+      "js": [
+        "./content.js",
+        "./contentMessaging.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "bookmarks",
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+"browser_action": {
+  "default_popup": "index.html"
+},
+  "icons": {
+    "16": "/images/mafia.png",
+    "32": "/images/mafia.png",
+    "48": "/images/mafia.png",
+    "128": "/images/mafia.png"
+  },
+  "web_accessible_resources":[
+    "/static/css/content.css", "/static/media/*"
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
+}
