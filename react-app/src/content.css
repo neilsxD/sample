@@ -1,0 +1,11 @@
+/* src/content.css */
+
+.my-extension{
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.my-extension h1{
+    color: #000;
+}
